@@ -3,7 +3,7 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<a asp-action="Create">Create</a>
 <table class="table col-6">
     <thead>
         <tr>
@@ -27,5 +27,35 @@
             </th>
         </tr>
     </thead>
+
+    @foreach (var item in Model)
+    {
+        <tbody>
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.enName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.bnName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.ProductUnit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.ManufracturingAddress)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                </td>
+            </tr>
+        </tbody>
+    }
 </table>
 
