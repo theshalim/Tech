@@ -7,8 +7,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Tech.Data;
+using Tech.Service;
+using Tech.Service.Interface;
 
 namespace Tech
 {
@@ -30,7 +34,10 @@ namespace Tech
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
+            
+            services.AddDbContext<DataContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DbConn")));
+            services.AddTransient<IProduct, ProductService>();
+          
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

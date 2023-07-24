@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Tech.Models.Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table col-6">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.enName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bnName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ManufracturingAddress)
+            </th>
+        </tr>
+    </thead>
+</table>
+
