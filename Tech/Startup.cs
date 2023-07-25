@@ -37,6 +37,7 @@ namespace Tech
             
             services.AddDbContext<DataContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DbConn")));
             services.AddTransient<IProduct, ProductService>();
+            services.AddTransient<IPriceRange, PriceRangeService>();
           
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

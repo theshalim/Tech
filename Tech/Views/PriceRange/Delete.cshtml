@@ -1,0 +1,23 @@
+﻿@model Tech.Models.PriceRange
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2 text-sm-center font-weight-light">
+            @Html.DisplayNameFor(model => model.enName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.enName)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="PriceRangeId" />
+        <input type="submit" value="Delete" class="btn btn-sm btn-outline-danger font-weight-light" />
+        <a asp-action="Index" class="btn btn-sm btn-outline-success font-weight-light">Back to List</a>
+    </form>
+</div>

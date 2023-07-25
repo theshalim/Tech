@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Tech.Models.PriceRange>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-sm btn-outline-success">Create New</a>
+</p>
+<table class="table col-6 table-hover table-bordered tab alert-light font-weight-light text-sm-center " >
+    <thead>
+        <tr>
+            <th class="col-6 font-weight-light" >
+                @Html.DisplayNameFor(model => model.enName)
+            </th>
+            <th class="col-6 font-weight-light">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.enName)
+            </td>
+            <td>
+                <a asp-action="Edit" class="btn btn-sm btn-outline-secondary" asp-route-id="@item.PriceRangeId">Edit</a> 
+                <a asp-action="Details"class="btn btn-sm btn-outline-info"  asp-route-id="@item.PriceRangeId">Details</a>
+                <a asp-action="Delete" class="btn btn-sm btn-outline-danger" asp-route-id="@item.PriceRangeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
