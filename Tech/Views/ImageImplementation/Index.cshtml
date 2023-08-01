@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Tech.Models.ImageImplementation.ImageImplementation>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class=" col-8 offset-2">
+            <h1 class="text-center text-primary">Imgae Implementation</h1>
+            <a class="btn btn-sm btn-primary float-left" asp-action="Create" asp-controller="ImageImplementation">Create</a>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Brand</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            </table>       
+        </div>
+
+    </div>
+
+</div>
+

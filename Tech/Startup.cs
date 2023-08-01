@@ -37,6 +37,7 @@ namespace Tech
             
             services.AddDbContext<DataContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DbConn")));
             services.AddTransient<IProduct, ProductService>();
+            services.AddTransient<IProductUnit, ProductUnitService>();
             services.AddTransient<IPriceRange, PriceRangeService>();
           
 
@@ -65,7 +66,7 @@ namespace Tech
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=ImageImplementation}/{action=ImageIndex}/{id?}");
             });
         }
     }
