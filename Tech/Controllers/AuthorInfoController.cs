@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Tech.Models;
 using Tech.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Tech.Controllers
 {
@@ -18,10 +19,9 @@ namespace Tech.Controllers
         }
         public IActionResult Index()
         {
-            var Author = _context.AuthorInfos.ToList();
-            return View(Author);
+           //var Authorinfo = _context.AuthorInfos.ToList();
+            return View(_context.AuthorInfos.ToList());
         }
-        //return View(await _context.priceRanges.ToListAsync());
         [HttpGet]
         public IActionResult Create()
         {

@@ -21,7 +21,7 @@ namespace Tech.Models
         public virtual Color Color { get; set; }
 
         public int ManufracturingAddressId { get; set; }
-        public virtual ManufracturingAddress ManufracturingAddress { get; set; }
+        //public virtual ManufracturingAddress ManufracturingAddress { get; set; }
 
     }
 }

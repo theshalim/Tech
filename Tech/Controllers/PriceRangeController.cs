@@ -26,7 +26,7 @@ namespace Tech.Controllers
             return View();
         } 
         [HttpPost]
-        public async Task<IActionResult> Create(PriceRange priceRange)
+        public IActionResult Create(PriceRange priceRange)
         {
             if(ModelState.IsValid)
             {

@@ -8,7 +8,7 @@ namespace Tech.Service.Interface
 {
     interface IAuthorInfo
     {
-        IEnumerable<AuthorInfo> GetAll();
+        List<AuthorInfo> GetAll();
         AuthorInfo GetById(int AuthorId);
         void Add(AuthorInfo authorInfo);
         void Delete(AuthorInfo authorInfo);

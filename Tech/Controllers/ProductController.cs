@@ -27,7 +27,7 @@ namespace Tech.Controllers
         {
             ViewData["ColorId"] = new SelectList(_context.colors, "ColorId", "ColorId");
             ViewData["UnitId"] = new SelectList(_context.productUnits, "UnitId", "UnitId");
-            ViewData["ManufracturingAddressId"] = new SelectList(_context.manufracturingAddresses, "ManufracturingAddressId", "ManufracturingAddressId");
+            //ViewData["ManufracturingAddressId"] = new SelectList(_context.manufracturingAddresses, "ManufracturingAddressId", "ManufracturingAddressId");
             return View();
         }
         [HttpPost]

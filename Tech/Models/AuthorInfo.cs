@@ -14,6 +14,6 @@ namespace Tech.Models
         [Required(ErrorMessage ="This field required!")]
         public string name { get; set; }
 
-        ICollection<BookInfo> bookInfos { get; set; }
+      public virtual ICollection<BookInfo> bookInfos { get; set; }
     }
 }

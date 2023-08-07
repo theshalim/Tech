@@ -22,9 +22,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Color)
             </th>
-            <th>
+            @*<th>
                 @Html.DisplayNameFor(model => model.ManufracturingAddress)
-            </th>
+            </th>*@
         </tr>
     </thead>
 
@@ -48,9 +48,9 @@
                 <td>
                     @Html.DisplayFor(modelitem => item.Color)
                 </td>
-                <td>
+                @*<td>
                     @Html.DisplayFor(modelitem => item.ManufracturingAddress)
-                </td>
+                </td>*@
                 <td>
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a>
                 </td>

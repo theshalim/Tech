@@ -25,11 +25,11 @@ namespace Tech.Service
             _context.AuthorInfos.Remove(authorInfo);
         }
 
-        public IEnumerable<AuthorInfo> GetAll()
-        {
-            return _context.AuthorInfos.ToList();
+        //public IEnumerable<AuthorInfo> GetAll()
+        //{
+        //    return _context.AuthorInfos.ToList();
          
-        }
+        //}
 
         public AuthorInfo GetById(int AuthorId)
         {
@@ -44,6 +44,11 @@ namespace Tech.Service
         public void Update(AuthorInfo authorInfo)
         {
             _context.AuthorInfos.Update(authorInfo);
+        }
+
+        List<AuthorInfo> IAuthorInfo.GetAll()
+        {
+            return _context.AuthorInfos.ToList();
         }
     }
 }
