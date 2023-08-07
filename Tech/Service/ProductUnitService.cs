@@ -13,7 +13,7 @@ namespace Tech.Service
         private readonly DataContext _context;
         public ProductUnitService (DataContext context)
         {
-
+            _context = context;
         }
         public void Add(ProductUnit productUnit)
         {

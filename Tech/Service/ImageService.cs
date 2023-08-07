@@ -18,7 +18,7 @@ namespace Tech.Service
 
         public void Add(ImageImplementation imageImplementation)
         {
-            _context.ImageImplementations.Add(imageImplementation); 
+           // _context.ImageImplementations.Add(); 
         }
 
         public void Delete(ImageImplementation imageImplementation)

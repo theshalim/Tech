@@ -16,11 +16,13 @@ namespace Tech.Data
         }
         public virtual DbSet<Product> products { get; set; }
         public virtual DbSet<ProductUnit> productUnits { get; set; }
-        public virtual DbSet<ImageImplementation> ImageImplementations { get; set; }
+        //public virtual DbSet<ImageImplementation> ImageImplementations { get; set; }
         public virtual DbSet<Color> colors { get; set; }
         public virtual DbSet<PriceRange> priceRanges { get; set; }
         public virtual DbSet<ProductionYear> productionYears { get; set; }
         public virtual DbSet<ManufracturingAddress> manufracturingAddresses { get; set; }
+        public virtual DbSet<BookInfo> BookInfos { get; set; }
+        public virtual DbSet<AuthorInfo> AuthorInfos { get; set; }
     }
     
 

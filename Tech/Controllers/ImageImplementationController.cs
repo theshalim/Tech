@@ -17,7 +17,8 @@ namespace Tech.Controllers
         }
         public IActionResult Index()
         {
-            return View(context.ImageImplementations.ToList());
+            //return View(context.ImageImplementations.ToList());
+            return View();
         }
     }
 }

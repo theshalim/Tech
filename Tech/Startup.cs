@@ -39,6 +39,8 @@ namespace Tech
             services.AddTransient<IProduct, ProductService>();
             services.AddTransient<IProductUnit, ProductUnitService>();
             services.AddTransient<IPriceRange, PriceRangeService>();
+            services.AddTransient<IAuthorInfo, AuthorInfoService>();
+            services.AddTransient<IBookInfo, BookInfoService>();
           
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -66,8 +68,16 @@ namespace Tech
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=ImageImplementation}/{action=ImageIndex}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //      name: "areas",
+            //      template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+
+            //});
         }
     }
 }
