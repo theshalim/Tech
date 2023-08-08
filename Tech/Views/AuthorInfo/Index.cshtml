@@ -4,18 +4,42 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div style="margin-bottom:5px; margin-left:160px;">
 
 
-<h1>TEST</h1>
-@*<div class="col-6">
+    <div class="row">
+        <h3 class="col-3">Author Information</h3>
+        <a asp-action="Create"  style="margin-left:140px; margin-bottom:5px;" class="btn btn-dark">New Author Add</a>
+    </div>
+    
+    <table class="table table-bordered table-hover col-5">
+        <thead>
+            <tr>
+                @*<th>
+                    Sl. No.
+                </th>*@
+                <th>
+                    @Html.DisplayNameFor(model => model.name)
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td class="col-3">
+                    <a asp-action="Delete" class="btn btn-outline-info">Edit</a>
+                    <a asp-action="Delete" class="btn btn-outline-danger">Delete</a>
+                </td>
+            </tr>
+            }
+        </tbody>
 
-    <form asp-controller="AuthorInfo" asp-action="Create" method="post">
-        <div class="form-group">
-            <label asp-for="name">Author Name</label>
-            <input asp-for="name" class="form-control" />
-            <span asp-validation-for="name" class="text-danger"></span>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>*@
-
+    </table>
+</div>

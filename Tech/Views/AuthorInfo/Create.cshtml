@@ -1,0 +1,19 @@
+﻿@model Tech.Models.AuthorInfo
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div style="margin-left:160px;">
+
+        <h4 class="col-3">Author Information Add </h4>
+
+    <div class="col-4">
+        <form asp-controller="AuthorInfo" asp-action="Create" method="post">
+            <div class="form-group ">
+                <input asp-for="name" class="form-control" placeholder="Write author name here.." />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-dark">Save</button>
+        </form>
+    </div>
+</div>

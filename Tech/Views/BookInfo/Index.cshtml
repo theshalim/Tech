@@ -3,20 +3,48 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div style="margin-bottom:5px; margin-left:160px;">
 
-<h1>Index</h1>
-<table class="table col-3 table-bordered table-hover">
-    <thead class="text-sm-left">
-        <tr>
-            <th>Serial No.</th>
-            <th>Book Name</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bangla</td>
-        </tr>
-    </tbody>
+    <div class="row">
+        <h3 class="col-3">Book Information</h3>
+        <a asp-action="Create" style="margin-left:140px; margin-bottom:5px;" class="btn btn-dark">New Book Add</a>
+    </div>
+    <table class="table col-5 table-bordered table-hover">
+        <thead class="text-sm-left">
+            <tr>
+                <th>Serial No.</th>
+                <th>
+                    @Html.DisplayNameFor(model =>model.name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model =>model.name)
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.AuthorInfo)
+                </td>
+                <td>
+                    <a asp-action="Delete" class="btn btn-outline-danger">Delete</a>
+                    <a asp-action="Edit" class="btn btn-outline-info">Edit</a>
+                </td>
+            </tr>
+            }
 
-</table>
+        </tbody>
+
+    </table>
+</div>
