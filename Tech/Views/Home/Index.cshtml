@@ -6,33 +6,66 @@
     @*<h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
 </div>
-<div class="col-12" style="margin-top:auto; height:500px; width:100%; box-decoration-break:initial; border-style:dotted; background-color:cadetblue">
+<div class="" style="height:300px; box-decoration-break:initial; background-color:cadetblue">
 
-    <div class="col-lg-12" style="">
-        <marquee> <h1 style="margin-top:200px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-display:auto; font-weight:300;">Slide Up-coming</h1></marquee>
+    <div class=" text-center">
+       <h1 class="align-content-center" style="font-family:'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif; font-display:auto; font-weight:300;">Up-Coming</h1>
     </div>
-    
 
 </div>
-<div class="col-12">
-    <div class="row">
-        <div class="col-1"></div>
-        <div class="col-1">
-            <a class=" btn btn-sm btn-info" style="margin-top:30px;" asp-action="Index" asp-controller="PriceRange">Price Range</a>
+<div class="row " style="margin-left:200px; margin-top:20px;" >
+        <a class="btn btn-sm btn-outline-secondary" style="margin-left:5px;" asp-action="ProductUnitIndex" asp-controller="ProductUnit">Product Unit</a>
+        
+</div>
+<div class="row">
+    @*Product Card*@
+    <div class="card border col-2.5" style="margin-top:20px; margin-left: 200px;">
+        <div class="card-header text-center text-capitalize">
+            <h3>Product Status <a class="btn btn-sm btn-dark" style="margin-left:55px;" asp-action="Index" asp-controller="Product">Add Product</a></h3>
         </div>
-        <div class="col-1">
-            <a class="btn btn-sm btn-info" style="margin-top:30px;" asp-action="Index" asp-controller="Product">Product</a>
+        <div class="card-body">
+            <p>Test Body</p>
         </div>
-        <div class="col-1">
-            <a class="btn btn-sm btn-info" style="margin-top:30px;" asp-action="ProductUnitIndex" asp-controller="ProductUnit">Product Unit</a>
-        </div>
-        <div class="col-1">
-            <a class="btn btn-sm btn-info" style="margin-top:30px;" asp-action="ImgaeIndex" asp-controller="ImageImplementation">Image </a>
+        <div class="card-footer">
+            <p>Test Footer</p>
         </div>
     </div>
-    <div class="col-1">
-        <a class="btn btn-sm btn-info" style="margin-top:30px;"  asp-action="Index" asp-controller="AuthorInfo">Author</a>
+    @*Book Card*@
+    <div class="card border col-2.5" style="margin-top:20px; margin-left: 0px;">
+        <div class="card-header text-center text-capitalize">
+            <h3>Book Status  <a class="btn btn-sm btn-dark" style="margin-left:55px;" asp-action="Index" asp-controller="BookInfo"> Add Book</a></h3>
+        </div>
+        <div class="card-body">
+            <p>Test Body</p>
+        </div>
+        <div class="card-footer">
+            <p>Test Footer</p>
+        </div>
+    </div>
+    @*Author Card*@
+    <div class="card border col-2.5" style="margin-top:20px; margin-left: 0px;">
+        <div class="card-header text-center text-capitalize">
+            <h3>Author Status <a class="btn btn-sm btn-dark" style="margin-left:5px;" asp-action="Index" asp-controller="AuthorInfo">Add Author</a></h3>
+        </div>
+        <div class="card-body">
+            <p>Test Body</p>
+        </div>
+        <div class="card-footer">
+            <p>Test Footer</p>
+        </div>
+    </div>
+    @*Price Card*@
+    <div class="card border col-2.5" style="margin-top:20px; margin-left: 0px;">
+        <div class="card-header text-center text-capitalize">
+            <h3>Price Range <a class="btn btn-sm btn-dark" style="margin-left:55px;" asp-action="Index" asp-controller="PriceRange">Add Price Range</a></h3>
+        </div>
+        <div class="card-body">
+            <p>Test Body</p>
+        </div>
+        <div class="card-footer">
+            <p>Test Footer</p>
+        </div>
     </div>
 </div>
-   
+
 

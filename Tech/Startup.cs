@@ -71,13 +71,13 @@ namespace Tech
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            //app.UseMvc(routes =>
-            //{
-            //    routes.MapRoute(
-            //      name: "areas",
-            //      template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                  name: "areas",
+                  template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
-            //});
+            });
         }
     }
 }
