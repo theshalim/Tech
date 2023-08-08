@@ -3,59 +3,67 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<a asp-action="Create">Create</a>
-<table class="table col-6 font-weight-light table-bordered table-hover ">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.enName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.bnName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductUnit)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Color)
-            </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.ManufracturingAddress)
-            </th>*@
-        </tr>
-    </thead>
+<div style="margin-left:160px;">
 
-    @foreach (var item in Model)
-    {
-        <tbody>
 
+    <div class="row">
+        <h3 class="col-3">Product Information</h3>
+    
+        <a asp-action="Create" style="margin-left:140px; margin-bottom:5px;" class="btn btn-dark">New Product Add</a>
+    </div>
+    <table class="table col-6 font-weight-light table-bordered table-hover ">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelitem => item.Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelitem => item.enName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelitem => item.bnName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelitem => item.ProductUnit)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelitem => item.Color)
-                </td>
-                @*<td>
-                    @Html.DisplayFor(modelitem => item.ManufracturingAddress)
-                </td>*@
-                <td>
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.enName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.bnName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductUnit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Color)
+                </th>
+                @*<th>
+                        @Html.DisplayNameFor(model => model.ManufracturingAddress)
+                    </th>*@
             </tr>
-        </tbody>
-    }
-</table>
+        </thead>
 
+        @foreach (var item in Model)
+        {
+            <tbody>
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.enName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.bnName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.ProductUnit)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Color)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelitem => item.ManufracturingAddress)
+                        </td>*@
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    </td>
+                </tr>
+            </tbody>
+        }
+    </table>
+
+</div>
