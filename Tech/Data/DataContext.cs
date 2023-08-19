@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Tech.Areas.HrAddress.Models;
 using Tech.Models;
 //using Tech.Models.ImageImplementation;
 
@@ -21,6 +22,10 @@ namespace Tech.Data
         public virtual DbSet<ProductionYear> productionYears { get; set; }
         public virtual DbSet<BookInfo> BookInfos { get; set; }
         public virtual DbSet<AuthorInfo> AuthorInfos { get; set; }
+        public virtual DbSet<HrDivision> HrDivisions { get; set; }
+        public virtual DbSet<HrDistrict> HrDistricts { get; set; }
+        public virtual DbSet<HrThana> HrThanas { get; set; }
+        public virtual DbSet<EmpInfo> EmpInfos { get; set; }
     }
     
 

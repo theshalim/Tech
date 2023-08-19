@@ -1,0 +1,19 @@
+﻿@model Tech.Areas.HrAddress.Models.HrDivision
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <form asp-controller="HrDivision" asp-action="Create" method="post">
+        <div class="form-group ">
+            <input asp-for="EnName" class="form-control" placeholder="Write english name here.." />
+            <span asp-validation-for="EnName" class="text-danger"></span>
+        </div>
+        <div class="form-group ">
+            <input asp-for="BnName" class="form-control" placeholder="Write bangla name here.." />
+            <span asp-validation-for="BnName" class="text-danger"></span>
+        </div>
+        <button type="Submit" class="btn btn-dark">Save</button>
+    </form>
+</div>
+

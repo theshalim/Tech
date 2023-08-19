@@ -14,4 +14,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Areas\HrAddress\Data\" />
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>
