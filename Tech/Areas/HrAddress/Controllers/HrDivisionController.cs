@@ -23,7 +23,7 @@ namespace Tech.Areas.HrAddress.Controllers
             return View(Division);
         }
         [HttpGet]
-        public async Task<IActionResult> Create()
+        public  IActionResult Create()
         {
             return  View();
         }

@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Tech.Areas.HrAddress.Models.HrDistrict>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+<a class="btn btn-danger" asp-action="Create" >Add</a>
+@Html.ActionLink("Add","Create","HrDivision")
